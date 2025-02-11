@@ -117,7 +117,7 @@ export default function HomeView() {
                             color="currentColor"
                             className='text-white'
                         />
-                        <p className='text-sm text-white'>{devices[0].activeAds}</p>
+                        <p className='text-sm text-white'>{devices[currentTab].activeAds}</p>
                     </div>
                 </div>
                 <div className="absolute bottom-4 left-4 z-10 border-gray-400 border text-white bg-white/20 backdrop-blur flex p-2 rounded-lg gap-2">
@@ -130,8 +130,8 @@ export default function HomeView() {
                     </div>
                     <div className='flex justify-between'>
                         <div className=''>
-                            <h1 className='text-white'>{devices[0].name}</h1>
-                            <h1 className='text-white text-xs'>{adsList[1].name}</h1>
+                            <h1 className='text-white'>{devices[currentTab].name}</h1>
+                            <h1 className='text-white text-xs'>{adsList[currentTab].name}</h1>
                             <h1 className='text-white text-xs mt-1
                             '>
                                 <span className='font-semibold'>Driver: </span>Saidkodirov Tolibjon
@@ -139,8 +139,8 @@ export default function HomeView() {
                         </div>
                         <div className='relative overflow-hidden md:ml-24 rounded w-7 h-7'>
                             <Image
-                                src={adsList[1].logo}
-                                alt={adsList[1].name}
+                                src={adsList[currentTab].logo}
+                                alt={adsList[currentTab].name}
                                 fill
                             />
                         </div>
